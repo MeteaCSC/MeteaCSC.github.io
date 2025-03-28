@@ -24,11 +24,13 @@ body {
 
 main {
     height: 100%;
-    justify-content: center;
-    font-family: Arial;
     color: #e6e6e7;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:50px;
+
+
+
 }
 
 h1 {
@@ -44,11 +46,11 @@ h2 {
 }
 
 p {
-    color: #4b5563;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.006em;
     margin: 0;
+    padding: 10px;
 }
 
 
@@ -64,7 +66,10 @@ footer {
     background-color: #232025;
     text-align: center;
     width: 100%;
+    padding-top: 20px;
+    margin-top: 20px;
     align-self: self-end;
+    bottom: 0px;
 
 }
 

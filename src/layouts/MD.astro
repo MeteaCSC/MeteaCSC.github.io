@@ -14,9 +14,8 @@ const { frontmatter, url } = Astro.props;
 <html lang="en">
     <Head title ={frontmatter.title} />
   <body>
-    <Nav title={frontmatter.title}/>
+    <Nav />
     <main class="center" transition:animate="fade">
-    <h1>{frontmatter.title}</h1>
     <slot />
     <button type="button" style = "margin-top:40px; bottom: 10px; background-color: var(--shadow);" onclick="window.location='/Astro-Blog/'">&larr; Back</button>
     </main>
@@ -24,9 +23,3 @@ const { frontmatter, url } = Astro.props;
   </body>
 </html>
 
-
-<style>
-  main{
-    display: block;
-  }
-</style>

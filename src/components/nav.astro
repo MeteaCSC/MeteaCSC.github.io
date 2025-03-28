@@ -1,6 +1,6 @@
 ---
 import type { MarkdownLayoutProps } from 'astro';
-const pages = await Astro.glob('../pages/markdown/*.md');
+const pages = await Astro.glob('../pages/posts/*.md');
 type Props = MarkdownLayoutProps<{
   title: string;
 }>;

@@ -1,3 +1,11 @@
+# NOTE:
+This is not the original MVCS website. It is built using astro, so if you would like to contribute, make sure to reference the documentation below:
+
+[Astro docs](https://docs.astro.build/en/getting-started/)
+
+- Understand how astro components work in pages
+- Understand how astro layouts work with slots
+
 # The Metea Valley CSC Website
 
 The website where our club posts all sorts of important recources such as meeting plans and general club information for the world to see.
@@ -24,44 +32,36 @@ Download the dependencies by running:
 npm install
 ```
 
-This should install the following thing:
-* typescript   - While you can use js, the main part of the website in in ts
-* ejs          - A lot like HTML but we can reuse components (ex. navbar, footer)
-* express      - The server
-* marked       - Markdown to HTML converter
-
-Then to start the express server on port 7777 type of respective commands into the terminal:
+Then to start the express server on port 4321 type of respective commands into the terminal:
 
 Linux
 
 ```bash
-make debug
+npm run dev
 ```
 
 Windows/MacOS
 ```bash
-npx tsc
-cp -R ./src/* ./build/
-node build/app.js
+not sure yet but check the astro docs
 ```
-Sorry windows users but you need to manualy type the commands found in `Makefile` (someone needs to fix the node commands so that the Cloudflare builds stop failing).
 
-Now go to http://localhost:7777 in your favorite web brower to view the website!
+
+Now go to http://localhost:4321/ in your favorite web brower to view the website!
 
 ## Project Structure
 
 ```bash
-
+── public # this is where non-code is stored
+   ├── fonts # want more fonts? put the ttf files here
+   ├── images # any and all images go here
+   ├── style # add your css files here, the file paths when imported should be "/public/style/your-style.css"
 ── src                 
-   ├── app.ts           # Entry point of the project
-   ├── pages            # Markdown resources
-   ├── static           # To be loaded by the client
-   │   ├── css          # CSS
-   │   │   └── fonts    # Fonts
-   │   ├── scripts      # Userland code
-   │   └── images       # Image resources
-   └── views            # EJS/HTML
-       └── partials     # Site wide resources (ex navbar/footer)
+   ├── assets           # just some svgs
+   ├── components       # want to edit things like the navbar, footer, head and header? check out the components located here
+   ├── layouts          # standard formats for pages (astro layouts) are here
+   └── pages            # EJS/HTML
+       └── markdown     # Site wide resources (ex navbar/footer)
+
 ```
 
 ## Adding new resources
