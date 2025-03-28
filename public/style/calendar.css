@@ -1,0 +1,55 @@
+.calendar {
+    width: auto;
+    margin: 0;
+    height: 80vh;
+    vertical-align: top;
+    margin: 0;
+}
+
+.calendar header {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: #e6e6e7
+}
+
+#calendar-dates {
+    height: 95%;
+}
+
+#calendar-dates table,
+td,
+th {
+    padding: 0;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: black;
+}
+
+#calendar-dates p {
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+#calendar-dates td {
+    height: 19%;
+    padding: 10px;
+    background-color: #e6e6e7;
+}
+
+#calendar-dates table {
+    height: 100%;
+    background: #e6e6e7;
+}
+
+#calendar-dates th {
+    background-color: #daa520;
+}
+
+#calendar-dates td,
+th {
+    width: 14.2vw;
+}

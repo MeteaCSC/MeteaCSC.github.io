@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+    <div id="hero">
+        <h1>D109 - Thursdays from 2:25-3:30</h1>
+      </div>
+      <div class="calendar">
+        <header>
+          <h1 id="yearmonth"></h1>
+        </header>
+        <div id="calendar-dates">
+          <table>
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Regular CS club session 2:30 PM to 3:30 PM</td>
+                <td></td>
+                <td></td>
+            </tr>
+          </table>
+          <!-- Need to figure out how to insert data here -->
+        </div>
+      </div>
+
+</Layout>
+<script type="module" src="scripts/calendar.js"></script>
+
+<style>
+
+.calendar {
+    width: auto;
+    margin: 0;
+    height: 80vh;
+    vertical-align: top;
+    margin: 0;
+}
+
+.calendar header {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: #e6e6e7
+}
+
+#calendar-dates {
+    height: 95%;
+}
+
+#calendar-dates table,
+td,
+th {
+    padding: 0;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: black;
+}
+
+#calendar-dates p {
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+#calendar-dates td {
+    height: 19%;
+    padding: 10px;
+    background-color: #e6e6e7;
+}
+
+#calendar-dates table {
+    height: 100%;
+    background: #e6e6e7;
+}
+
+#calendar-dates th {
+    background-color: #daa520;
+}
+
+#calendar-dates td,
+th {
+    width: 14.2vw;
+}
+</style>

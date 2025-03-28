@@ -1,0 +1,16 @@
+---
+const {title} = Astro.props
+import '/style/global.css?url';
+import { ClientRouter } from 'astro:transitions';
+
+---
+
+<head>
+    <ClientRouter />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/global.css" />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/new-Website//favicon-32x32.png" />
+    <meta name="generator" content={Astro.generator} />
+</head>

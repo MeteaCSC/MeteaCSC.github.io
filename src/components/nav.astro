@@ -1,0 +1,80 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+const pages = await Astro.glob('../pages/markdown/*.md');
+type Props = MarkdownLayoutProps<{
+  title: string;
+}>;
+---
+<div id="navbar">
+    <nav>
+      
+        <a href="/">
+          <img src="/images/favicon-32x32.png">
+        </a>
+      
+      <ul>
+        <li>
+          <a href="/calendar">Calendar</a>
+        </li>
+        <li>
+          <a href="/leaderboards">Leaderboards</a>
+        </li>
+        {pages.map(page => <li style="list-style-type: none;"><a href={page.url}>{page.frontmatter.title}</a></li>)}
+
+      </ul>
+      <a href="/#about">About</a>
+
+
+    
+    </nav>
+  </div>
+
+    <style>
+    #navbar {
+    border-bottom: 2px solid #100f11;
+    background-color: #232025;
+    position: sticky;
+    height: 3.5rem;
+    left: 0;
+    top: 0;
+}
+
+#navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#navbar li {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+#navbar a {
+    color: #daa520;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: #cfbb88;
+}
+
+#logo a {
+    z-index: 1;
+}
+
+#logo img {
+    z-index: 0;
+}
+    </style>
