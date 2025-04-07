@@ -60,7 +60,7 @@ a {
 }
 
 footer {
-    max-height: 3rem;
+    max-height: 4rem;
     font-size: smaller;
     color: #daa520;
     background-color: #232025;
@@ -70,6 +70,8 @@ footer {
     margin-top: 20px;
     align-self: self-end;
     bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
 
 }
 
@@ -88,13 +90,6 @@ footer a {
     z-index: -1;
     filter: blur(100px);
 }
-
-/* #container {
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    height: 100%;
-} */
-
-
 
 #hero {
     display: flex;
@@ -134,11 +129,5 @@ footer a {
         padding: 14px 18px;
     }
 
-    #news {
-        right: 16px;
-        left: 16px;
-        bottom: 2.5rem;
-        max-width: 100%;
-    }
 
 }
